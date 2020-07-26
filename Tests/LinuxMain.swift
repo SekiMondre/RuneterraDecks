@@ -3,5 +3,6 @@ import XCTest
 import RuneterraDecksTests
 
 var tests = [XCTestCaseEntry]()
-tests += RuneterraDecksTests.allTests()
+tests += Base32Tests.allTests()
+tests += DeckCodingTests.allTests()
 XCTMain(tests)
