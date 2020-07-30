@@ -1,7 +1,7 @@
 # RuneterraDecks
 
-Decks in Legends of Runeterra can be converted into and from a Base32 string that can be easily used share decks with other players and game clients.
-
+Decks in Legends of Runeterra can be converted into and from a Base32 string that can be easily used to share decks with other players and game clients.
+ 
 ## Decoding & Encoding
 
 A deck is represented by a list of card entries. Each entry specify a single card by its corresponding code and how many copies are present in the deck.
