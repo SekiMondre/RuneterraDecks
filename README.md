@@ -6,6 +6,9 @@ Decks in Legends of Runeterra can be converted into and from a Base32 string tha
 
 A deck is represented by a list of card entries. Each entry specify a single card by its corresponding code and how many copies are present in the deck.
 
+The library supports up the the Rising Tides (Bilgewater) expansion set. It also supports special case decks with 4+ copies of a card.
+
+
 ### Decoding:
 
 This is an example decoding my favorite Jinx & Draven deck:
@@ -29,4 +32,4 @@ let cards = [Entry(cardCode: "01NX020", count: 3), ... ]
 let code = try? DeckEncoder.encode(cards)
 ```
 
-The library supports up the the Rising Tides (Bilgewater) expansion set.
+
