@@ -1,3 +1,30 @@
 # RuneterraDecks
 
-A description of this package.
+Decks in Legends of Runeterra can be converted into and from a Base32 string that can be easily used share decks with other players and game clients.
+
+## Decoding & Encoding
+
+A deck is represented by a list of card entries. Each entry specify a single card by its corresponding code and how many copies are present in the deck.
+
+The usage of the library is very simple, this is an example decoding my favorite Jinx & Draven deck:
+
+### Decoding:
+```swift
+import RuneterraDecks
+
+let deckCode = "CEBAGAIDCQRSOCIBAQAQYEQ4EYTSQLJUAIAQCAYLAEAQIDIA"
+let cardEntries = try? DeckDecoder.decode(deckCode)
+```
+
+To encode a deck, just create an `Entry` array for the cards and pass is to the encoder:
+
+### Encoding:
+```swift
+import RuneterraDecks
+
+// Add your card entries to an array in any way you like
+let cards = [Entry(cardCode: "01NX020", count: 3), ... ] 
+let code = try? DeckEncoder.encode(cards)
+```
+
+The library supports up the the Rising Tides (Bilgewater) expansion set.
