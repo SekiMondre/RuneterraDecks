@@ -28,7 +28,7 @@ To encode a deck, just create an `Entry` array for the cards and pass is to the 
 import RuneterraDecks
 
 // Add your card entries to an array in any way you like
-let cards = [Entry(cardCode: "01NX020", count: 3), ... ] 
+let cards: [Entry] = [Entry(cardCode: "01NX020", count: 3), ... ] 
 let code = try? DeckEncoder.encode(cards)
 ```
 
