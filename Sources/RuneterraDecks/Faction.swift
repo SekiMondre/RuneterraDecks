@@ -30,7 +30,8 @@ public enum Faction: Int, CaseIterable {
     case piltoverZaun       = 4
     case shadowIsles        = 5
     case bilgewater         = 6
-    
+    case targon             = 9
+
     public var identifier: String {
         switch self {
         case .demacia:      return "DE"
@@ -40,6 +41,7 @@ public enum Faction: Int, CaseIterable {
         case .piltoverZaun: return "PZ"
         case .shadowIsles:  return "SI"
         case .bilgewater:   return "BW"
+        case .targon:       return "MT"
         }
     }
     

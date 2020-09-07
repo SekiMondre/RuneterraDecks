@@ -56,6 +56,7 @@ final class DeckCodingTests: XCTestCase {
         ("testOrderIsInconsequential4Plus",         testOrderIsInconsequential4Plus),
         ("testOrderIsInconsequential4PlusExtra",    testOrderIsInconsequential4PlusExtra),
         ("testBilgewaterSet",                       testBilgewaterSet),
+        ("testTargonSet",                           testTargonSet),
         ("testBadCardCount",                        testBadCardCount),
         ("testBadCardCodes",                        testBadCardCodes),
         ("testBadDeckDecoding",                     testBadDeckDecoding),
@@ -274,6 +275,17 @@ final class DeckCodingTests: XCTestCase {
             Entry(cardCode: "01DE002", count: 4),
             Entry(cardCode: "02BW003", count: 2),
             Entry(cardCode: "02BW010", count: 3),
+            Entry(cardCode: "01DE004", count: 5)
+        ]
+        let decoded = try encodeThenDecode(cards)
+        assertCardsEqual(cards, decoded)
+    }
+
+    func testTargonSet() throws {
+        let cards = [
+            Entry(cardCode: "01DE002", count: 4),
+            Entry(cardCode: "02MT003", count: 2),
+            Entry(cardCode: "02MT010", count: 3),
             Entry(cardCode: "01DE004", count: 5)
         ]
         let decoded = try encodeThenDecode(cards)
