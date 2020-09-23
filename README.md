@@ -6,7 +6,7 @@ Decks in Legends of Runeterra can be converted into and from a Base32 string tha
 
 A deck is represented by a list of card entries. Each entry specify a single card by its corresponding code and how many copies are present in the deck.
 
-The library supports up the the Rising Tides (Bilgewater) expansion set. It also supports special case decks with 4+ copies of a card.
+The library supports up the the Call of the Mountain (Targon) expansion set. It also supports special case decks with 4+ copies of a card.
 
 
 ### Decoding:
